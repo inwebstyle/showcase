@@ -20,27 +20,29 @@ Parameters:
 
 Label | Type | Values | Example | Description
 -----|-------|--------|---------|-------------
-name | string|  - | iName| jkljlkj
-name | string|  - | iName| jkljlkj
+name | string|  - | `iWine2020`| **Decanter Name**. The API responds with a the name of the device.
+id | string|  - | `001`| **Decanter ID**. You can call by decanter ID. The API responds with the exact result. 
+vol | string|  - | `250`| **Volume**. Volume of the liquid in mililiters (ml). 
+temp | string| 0-100 | `45`| **Temperature**. Temperature of the liquid in degrees Celsius..
+alc | string|  - | iName| jkljlkj
+sug | string|  - | iName| jkljlkj
+type | string|  - | iName| jkljlkj
+type-guess | string|  - | iName| jkljlkj
+vibr | string|  - | iName| jkljlkj
 
-      parameters:
-        - $ref: '#/components/parameters/name'
-        - $ref: '#/components/parameters/id'
-        - $ref: '#/components/parameters/vol'
-        - $ref: '#/components/parameters/temp'
-        - $ref: '#/components/parameters/alc'
-        - $ref: '#/components/parameters/sug'
-        - $ref: '#/components/parameters/type'
-        - $ref: '#/components/parameters/type-guess'
-        - $ref: '#/components/parameters/vibr'
+#### Responses
         
-      responses:
+Successful Response
+
+responses:
         200:
           description: Successful response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/200'
+
+Not-Found Response
 
         404:
           description: Not found response
@@ -51,33 +53,19 @@ name | string|  - | iName| jkljlkj
                 type: string
                 example: Not found
   
-components:
-  parameters:
-    name:
-      name: name
-      in: query
-      description: "**Decanter Name**. *Example: `iWine2020`*. The API responds with a the name of the device."
-      schema:
-        type: string
 
-    id:
-      name: id
-      in: query
-      description: "**Decanter ID**. *Example: `001`*. You can call by decanter ID. The API responds with the exact result. The limit of devices is 8. *Note: A single ID counts as a one API call. So, if you have 3 decanter IDs, it's treated as 3 API calls.*"
-      schema:
-        type: string
      
     vol:     
       name: vol
       in: query
-      description: "**Volume**. Volume of the liquid in mililiters (ml). *Example: `250`*."
+      description: ""
       schema:
        type: string
 
     temp:
       name: temp
       in: query
-      description: "**Temperature**. Temperature of the liquid in degrees Celsius. *Example: `45`*."
+      description: ""
       schema:
         type: string
 
