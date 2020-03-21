@@ -18,14 +18,14 @@
 
 Parameters:
 
-Label | Type | Values | Example | Description
+Label | Type | Value Range | Example | Description
 -----|-------|--------|---------|-------------
 name | string|  - | `iWineBottle1`| **Decanter Name**. A human-friendly name of the iWine decanter.
-id | string|  - | `001`| **Decanter ID**. You can call by decanter ID. The API responds with the exact result. 
-vol | string|  - | `250`| **Volume**. Volume of the liquid in mililiters (ml). 
-temp | int| 0-100 | `45`| **Temperature**. Temperature of the liquid in degrees Celsius..
+id | string|  - | `abc12348`| **Decanter ID**. A machine name of the iWine decanter. 
+vol | string|  - | `250`| **Volume**. Volume of the liquid in mililiters (mL). 
+temp | int| 0-100 | `45`| **Temperature**. Temperature of the liquid in degrees Celsius.
 alc | number|  0-90 | `12.5`| **Alcohol Content**. Alcohol content of the liquid in %.
-sug | int| 0-250 | `10`| **Sugar Content**. Sugar content of the liquid in g/L..
+sug | int| 0-250 | `10`| **Sugar Content**. Sugar content of the liquid in g/L.
 type | string| array {red, white, rose, orange} |`red`| **Wine Type**. Type of the wine in the iWine decanter. Possible values: `red`, `white`, `rose`, and `orange`. Must be used together with `type-guess`.
 type-guess | number| 0-1 | `0.5`| **Wine Type Guess Confidence Coefficient**. As the type of the wine in the iWine decanter is determined using machine learning algorithms, it is accompanied by a certain confidence coefficient. Must be used together with `type`. *Example: *.
 vibr | string| array{on,off}| `on`| **Vibration** on/off. Shows if the decanter is currently shaking. Possible values: `on` and `off`. Default value is `off`.
@@ -60,30 +60,9 @@ Not-Found Response
                 example: Not found
   
 
+### PUT /temp
 
+### PUT /vibr
 
-  
-          description: NAME of the decanter
-          example: 
-        id:
-          type: string
-          description: ID of the decanter
-          example: abc12348
-        vol:
-          type: string
-          description: Volume, mL
-          example: 1000
-        temp:
-          type: string
-          description: Temperature, C
-          example: 45
-        alc:
-          type: number
-          description: Alcohol content, %
-          example: 12
-        sug:
-          type: number
-          description: Sugar content, g/L
-          example: 10
 
    
