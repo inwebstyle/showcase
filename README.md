@@ -7,14 +7,14 @@
 * Contact: email: "iwine_email@iwine.iot"
 
 - - -
-**iWine** is a smart wine decanter developed by iWine Solutions. It connects to Wi-Fi and acts as an HTTP server so it can interact with devices from the same local network. The decanter reports the following information: volume of the liquid, alcohol content, sugar content, temperature, and a guess on the type of wine.  You can remotely heat or cool the wine to a certain temperature level or to shake the carafe to saturate the wine with oxygen. The above functionality is implemented through a set of HTTP calls (RESTful API). iWine API describes all necessary API's to implement a mobile client.
+**iWine** is a smart wine decanter developed by iWine Solutions. It connects to Wi-Fi and acts as an HTTP server so it can interact with devices from the same local network. The decanter reports the following information: volume of the liquid, alcohol content, sugar content, temperature, and a guess on the type of wine.  You can remotely heat or cool the wine to a certain temperature level or to shake the decanter to saturate the wine with oxygen. The above functionality is implemented through a set of HTTP calls (RESTful API). **iWine API** describes all necessary API's to implement a mobile client.
 - - -
 
 ## API Calls
 
 ### GET /status
 
-**Retrieve decanter contents data**: Access the decanter contents data for a selected iWine decanter on your local network.
+**Retrieve decanter contents data**: access the decanter contents data for a selected iWine decanter on your local network.
 
 Parameters:
 
@@ -51,17 +51,14 @@ Not-Found Response
 
         404:
           description: Not found response
-          content:
-            text/plain:
-              schema:
-                title: Weather not found
-                type: string
-                example: Not found
+         
   
 
 ### PUT /temp
+**Heat or cool the wine**: bring the decanter contents to a certain temperature level.
 
 ### PUT /vibr
+**Start/stop vibration**: shake the decanter to saturate the wine with oxygen or stop the shaking process.
 
+## QuickStart Example
 
-   
