@@ -23,10 +23,10 @@ Label | Type | Values | Example | Description
 name | string|  - | `iWine2020`| **Decanter Name**. The API responds with a the name of the device.
 id | string|  - | `001`| **Decanter ID**. You can call by decanter ID. The API responds with the exact result. 
 vol | string|  - | `250`| **Volume**. Volume of the liquid in mililiters (ml). 
-temp | string| 0-100 | `45`| **Temperature**. Temperature of the liquid in degrees Celsius..
-alc | string|  - | iName| jkljlkj
-sug | string|  - | iName| jkljlkj
-type | string|  - | iName| jkljlkj
+temp | int| 0-100 | `45`| **Temperature**. Temperature of the liquid in degrees Celsius..
+alc | number|  0-90 | `12.5`| **Alcohol Content**. Alcohol content of the liquid in %.
+sug | int|  - | iName| **Sugar Content**. Sugar content of the liquid in g/L. *Example: `10`*.
+type | string| array {red, white, rose, orange} |`red`| **Wine Type**. Type of the wine in the iWine decanter. Must be used together with `type-guess`.
 type-guess | string|  - | iName| jkljlkj
 vibr | string|  - | iName| jkljlkj
 
@@ -34,13 +34,19 @@ vibr | string|  - | iName| jkljlkj
         
 Successful Response
 
-responses:
-        200:
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/200'
+'''
+{
+  "name": "iWineBottle1",
+  "id": "abc12348",
+  "vol": 1000,
+  "temp": 45,
+  "alc": 12,
+  "sug": 10,
+  "type": "red",
+  "type-guess": 0.5,
+  "vibr": "On"
+}
+'''
 
 Not-Found Response
 
@@ -72,21 +78,21 @@ Not-Found Response
     alc:
       name: alc
       in: query
-      description: "**Alcohol Content**. Alcohol content of the liquid in %. *Example: `12`*."
+      description: ""
       schema:
         type: string
 
     sug:
       name: sug
       in: query
-      description: "**Sugar Content**. Sugar content of the liquid in g/L. *Example: `10`*."
+      description: ""
       schema:
         type: string
 
     type:          
       name: type
       in: query
-      description: "**Wine Type**. Type of the wine in the iWine decanter. Must be used together with `type-guess`. *Example: `red`*."
+      description: ""
       schema:
         type: string
         enum: [unknown, red, white, rose, orange]
