@@ -52,10 +52,12 @@ Successful Response
     }
 
 
-Not-Found Response
+#### Error Codes
 
-        404:
-          description: Not found response
+Code |  Description
+------------------------
+404  | Device not found
+       
          
   
 
@@ -68,9 +70,17 @@ Label     | Type   | Value Range                      | Example       | Descript
 temp      | number | 0-100                            | `45`          | **Temperature**. Target temperature of the liquid in degrees Celsius.
 vibr      | string | array {on, off}                  | `on`          | **Vibration**: `on` - start shaking, `off` - stop shaking. on/off. 
 
-### Example
+#### Example
 PUT /temp/{value}
 **Heat or cool the wine**: bring the decanter contents to a certain temperature level.
 
 PUT /vibr/{value}
 **Start/stop vibration**: shake the decanter to saturate the wine with oxygen or stop the shaking process.
+
+#### Error Codes
+
+Code |  Description
+-------------------
+405  | Invalid input
+
+
