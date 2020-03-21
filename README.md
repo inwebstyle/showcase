@@ -12,12 +12,14 @@
 
 ## API Calls
 
+[link text itself]
+
 ### Security Scheme
 The application security is realized in two following ways:
 * HTTPS: All communications go though HTTPS via SSL.
 * Application ID: Each requiest should contain the application ID (`app id`).
 
-### GET /status
+[link text itself]: ### GET /status
 
 **Retrieve decanter contents data**: access the decanter contents data for a selected iWine decanter on your local network.
 
