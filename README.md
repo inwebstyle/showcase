@@ -14,7 +14,7 @@
 
 ### Security Scheme
 The application security is realized in two following ways:
-* HTTPS: All communications go via HTTPS via SSL.
+* HTTPS: All communications go though HTTPS via SSL.
 * Application ID: Each requiest should contain the application ID (`app id`).
 
 ### GET /status
