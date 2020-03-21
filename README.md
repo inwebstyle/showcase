@@ -20,15 +20,15 @@ Parameters:
 
 Label | Type | Values | Example | Description
 -----|-------|--------|---------|-------------
-name | string|  - | `iWine2020`| **Decanter Name**. The API responds with a the name of the device.
+name | string|  - | `iWineBottle1`| **Decanter Name**. A human-friendly name of the iWine decanter.
 id | string|  - | `001`| **Decanter ID**. You can call by decanter ID. The API responds with the exact result. 
 vol | string|  - | `250`| **Volume**. Volume of the liquid in mililiters (ml). 
 temp | int| 0-100 | `45`| **Temperature**. Temperature of the liquid in degrees Celsius..
 alc | number|  0-90 | `12.5`| **Alcohol Content**. Alcohol content of the liquid in %.
-sug | int|  - | iName| **Sugar Content**. Sugar content of the liquid in g/L. *Example: `10`*.
-type | string| array {red, white, rose, orange} |`red`| **Wine Type**. Type of the wine in the iWine decanter. Must be used together with `type-guess`.
-type-guess | string|  - | iName| jkljlkj
-vibr | string|  - | iName| jkljlkj
+sug | int| 0-250 | `10`| **Sugar Content**. Sugar content of the liquid in g/L..
+type | string| array {red, white, rose, orange} |`red`| **Wine Type**. Type of the wine in the iWine decanter. Possible values: `red`, `white`, `rose`, and `orange`. Must be used together with `type-guess`.
+type-guess | number| 0-1 | `0.5`| **Wine Type Guess Confidence Coefficient**. As the type of the wine in the iWine decanter is determined using machine learning algorithms, it is accompanied by a certain confidence coefficient. Must be used together with `type`. *Example: *.
+vibr | string| array{on,off}| `on`| **Vibration** on/off. Shows if the decanter is currently shaking. Possible values: `on` and `off`. Default value is `off`.
 
 #### Responses
         
@@ -60,66 +60,11 @@ Not-Found Response
                 example: Not found
   
 
-     
-    vol:     
-      name: vol
-      in: query
-      description: ""
-      schema:
-       type: string
 
-    temp:
-      name: temp
-      in: query
-      description: ""
-      schema:
-        type: string
 
-    alc:
-      name: alc
-      in: query
-      description: ""
-      schema:
-        type: string
-
-    sug:
-      name: sug
-      in: query
-      description: ""
-      schema:
-        type: string
-
-    type:          
-      name: type
-      in: query
-      description: ""
-      schema:
-        type: string
-        enum: [unknown, red, white, rose, orange]
-    
-    type-guess:          
-      name: type-guess
-      in: query
-      description: "**Wine Type Confidence Coefficient**. As the type of the wine in the iWine decanter is determined using machine learning algorithms, it is accompanied by a certain confidence coefficient. Must be used together with `type`. *Example: `0.5`*."
-      schema:
-        type: string
-
-    vibr:
-      name: vibr
-      in: query
-      description: '**Vibration**. *Example: on*. Possible values: `on` and `off`.'
-      schema:
-        type: string
-        enum: [on, off]
-  schemas:
-    200:
-      title: Successful response
-#      type: object
-      properties:
-        name:
-          type: string
+  
           description: NAME of the decanter
-          example: iWineBottle1
+          example: 
         id:
           type: string
           description: ID of the decanter
@@ -140,16 +85,5 @@ Not-Found Response
           type: number
           description: Sugar content, g/L
           example: 10
-        type:
-          type: array
-          description: Wine type in the decanter
-          example: red
-        type-guess:
-          type: number
-          description: Wine Type Confidence Coefficient
-          example: 0.5
-        vibr:
-          type: array
-          description: Vibration On/Off
-          example: On
 
+   
