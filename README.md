@@ -12,18 +12,16 @@
 
 ## API Calls
 
-[link text itself]
-
 ### Security Scheme
 The application security is realized in two following ways:
 * HTTPS: All communications go though HTTPS via SSL.
 * Application ID: Each requiest should contain the application ID (`app id`).
 
-[link text itself]: ### GET /status
+### GET /status
 
 **Retrieve decanter contents data**: access the decanter contents data for a selected iWine decanter on your local network.
 
-Parameters:
+#### Parameters:
 
 Label | Type | Value Range | Example | Description
 -----|-------|--------|---------|-------------
@@ -66,6 +64,4 @@ Not-Found Response
 
 ### PUT /vibr
 **Start/stop vibration**: shake the decanter to saturate the wine with oxygen or stop the shaking process.
-
-## QuickStart Example
 
