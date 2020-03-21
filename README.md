@@ -1,19 +1,18 @@
-= iWine API =
+= iWine API 
 
-version: "1.0"
-
-iWine is a smart wine decanter developed by iWine Solutions. It connects to Wi-Fi and acts as an HTTP server so it can interact with devices from the same local network. The decanter reports the following information: volume of the liquid, alcohol content, sugar content, temperature, and a guess on the type of wine.  You can remotely heat or cool the wine to a certain temperature level or to shake the carafe to saturate the wine with oxygen. The above functionality is implemented through a set of HTTP calls (RESTful API). iWine API describes all necessary API's to implement a mobile client.
-
-== Info ==
-
+* Version: "1.0"
 * Terms of service: https://iwine.iot/terms
 * License: https://iwine.iot/license
 * Production Server: https://api.iwine.iot/data/1.0/
 * Contact: email: "iwine_email@iwine.iot"
 
-== API Calls ==
+- - -
+iWine is a smart wine decanter developed by iWine Solutions. It connects to Wi-Fi and acts as an HTTP server so it can interact with devices from the same local network. The decanter reports the following information: volume of the liquid, alcohol content, sugar content, temperature, and a guess on the type of wine.  You can remotely heat or cool the wine to a certain temperature level or to shake the carafe to saturate the wine with oxygen. The above functionality is implemented through a set of HTTP calls (RESTful API). iWine API describes all necessary API's to implement a mobile client.
+- - -
 
-GET /status
+== API Calls
+
+=== GET /status
 
 paths: 
   /status:
