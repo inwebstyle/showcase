@@ -13,9 +13,9 @@
 ## API Calls
 
 ### Security Scheme
-The application security is realized in two following ways:
+The application security is realized by the following:
 * HTTPS: All communications go though HTTPS via SSL.
-* Application ID: Each requiest should contain the application ID (`app id`).
+
 
 ### GET /status
 
