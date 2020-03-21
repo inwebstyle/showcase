@@ -22,7 +22,7 @@ Label | Type | Value Range | Example | Description
 -----|-------|--------|---------|-------------
 name | string|  - | `iWineBottle1`| **Decanter Name**. A human-friendly name of the iWine decanter.
 id | string|  - | `abc12348`| **Decanter ID**. A machine name of the iWine decanter. 
-vol | string|  - | `250`| **Volume**. Volume of the liquid in mililiters (mL). 
+vol | int| 0-4000 | `250`| **Volume**. Volume of the liquid in mililiters (mL). 
 temp | int| 0-100 | `45`| **Temperature**. Temperature of the liquid in degrees Celsius.
 alc | number|  0-90 | `12.5`| **Alcohol Content**. Alcohol content of the liquid in %.
 sug | int| 0-250 | `10`| **Sugar Content**. Sugar content of the liquid in g/L.
