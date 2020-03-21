@@ -152,10 +152,4 @@ components:
           type: array
           description: Vibration On/Off
           example: On
-    
-  securitySchemes:
-    app_id:
-      type: apiKey
-      description: API key to authorize requests. If you don't have an OpenWeatherMap API key, use `fd4698c940c6d1da602a70ac34f0b147`.
-      name: appid
-      in: query
+
