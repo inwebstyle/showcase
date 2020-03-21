@@ -34,19 +34,18 @@ vibr | string| array{on,off}| `on`| **Vibration** on/off. Shows if the decanter 
         
 Successful Response
 
-'''
-{
-  "name": "iWineBottle1",
-  "id": "abc12348",
-  "vol": 1000,
-  "temp": 45,
-  "alc": 12,
-  "sug": 10,
-  "type": "red",
-  "type-guess": 0.5,
-  "vibr": "On"
-}
-'''
+    {
+      "name": "iWineBottle1",
+      "id": "abc12348",
+      "vol": 1000,
+      "temp": 45,
+      "alc": 12,
+      "sug": 10,
+      "type": "red",
+      "type-guess": 0.5,
+      "vibr": "On"
+    }
+
 
 Not-Found Response
 
