@@ -29,10 +29,10 @@ name      | string |    -                             | `iWineBottle1`| **Decant
 id        | string |    -                             | `abc12348`    | **Decanter ID**. A machine name of the iWine decanter. 
 vol       | int    | 0-4000                           | `250`         | **Volume**. Volume of the liquid in mililiters (mL). 
 temp      | int    | 0-100                            | `45`          | **Temperature**. Temperature of the liquid in degrees Celsius.
-alc       | number |  0-90                            | `12.5`        | **Alcohol Content**. Alcohol content of the liquid in %.
+alc       | int    |  0-90                            | `12`        | **Alcohol Content**. Alcohol content of the liquid in %.
 sug       | int    | 0-250                            | `10`          | **Sugar Content**. Sugar content of the liquid in g/L.
 type      | string | array {red, white, rose, orange} |`red`          | **Wine Type**. Type of the wine in the iWine decanter. Possible values: `red`, `white`, `rose`, and `orange`. 
-type-guess| number | 0-1                              | `0.5`         | **Wine Type Guess Confidence Coefficient**. A confidence coefficient of the wine type guess from 0 to 1.
+type-guess| int | 0-100                              | `50`         | **Wine Type Guess Confidence Coefficient**. A confidence coefficient of the wine type in %.
 vibr      | string | array {on, off}                  | `on`          | **Vibration** on/off. Shows if the decanter is currently shaking. Possible values: `on` and `off`. Default value is `off`.
 
 #### Responses
