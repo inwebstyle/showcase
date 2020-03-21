@@ -27,12 +27,12 @@ Label     | Type   | Value Range                      | Example       | Descript
 ----------|--------|----------------------------------|---------------|-------------
 name      | string |    -                             | `iWineBottle1`| **Decanter Name**. A human-friendly name of the iWine decanter.
 id        | string |    -                             | `abc12348`    | **Decanter ID**. A machine name of the iWine decanter. 
-vol       | int    | 0-4000                           | `250`         | **Volume**. Volume of the liquid in mililiters (mL). 
-temp      | int    | 0-100                            | `45`          | **Temperature**. Temperature of the liquid in degrees Celsius.
-alc       | int    |  0-90                            | `12`        | **Alcohol Content**. Alcohol content of the liquid in %.
-sug       | int    | 0-250                            | `10`          | **Sugar Content**. Sugar content of the liquid in g/L.
+vol       | number | 0-4000                           | `250`         | **Volume**. Volume of the liquid in mililiters (mL). 
+temp      | number | 0-100                            | `45`          | **Temperature**. Temperature of the liquid in degrees Celsius.
+alc       | number |  0-90                            | `12.5`        | **Alcohol Content**. Alcohol content of the liquid in %.
+sug       | number | 0-250                            | `10`          | **Sugar Content**. Sugar content of the liquid in g/L.
 type      | string | array {red, white, rose, orange} |`red`          | **Wine Type**. Type of the wine in the iWine decanter. Possible values: `red`, `white`, `rose`, and `orange`. 
-type-guess| int | 0-100                              | `50`         | **Wine Type Guess Confidence Coefficient**. A confidence coefficient of the wine type in %.
+type-guess| number | 0-100                              | `50`         | **Wine Type Guess Confidence Coefficient**. A confidence coefficient of the wine type in %.
 vibr      | string | array {on, off}                  | `on`          | **Vibration** on/off. Shows if the decanter is currently shaking. Possible values: `on` and `off`. Default value is `off`.
 
 #### Responses
@@ -59,9 +59,19 @@ Not-Found Response
          
   
 
-### PUT /temp
+### PUT /{parameter}
+
+#### Parameters:
+
+Label     | Type   | Value Range                      | Example       | Description
+----------|--------|----------------------------------|---------------|-------------
+temp      | number | 0-100                            | `45`          | **Temperature**. Temperature of the liquid in degrees Celsius.
+
+vibr      | string | array {on, off}                  | `on`          | **Vibration** on/off. Shows if the decanter is currently shaking. Possible values: `on` and `off`. Default value is `off`.
+
+### Example
+PUT /temp/{value}
 **Heat or cool the wine**: bring the decanter contents to a certain temperature level.
 
-### PUT /vibr
+PUT /vibr/{value}
 **Start/stop vibration**: shake the decanter to saturate the wine with oxygen or stop the shaking process.
-
