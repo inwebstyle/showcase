@@ -37,7 +37,7 @@ vibr      | string | array {on, off}                  | `on`          | **Vibrat
 
 #### Responses
         
-Successful Response
+**Successful Response**
 
     {
       "name": "iWineBottle1",
@@ -52,10 +52,10 @@ Successful Response
     }
 
 
-#### Error Codes
+**Error Codes**
 
 Code |  Description
-------------------------
+-----|------------------
 404  | Device not found
        
          
@@ -79,8 +79,6 @@ PUT /vibr/{value}
 
 #### Error Codes
 
-Code |  Description
--------------------
+Code | Description
+-----|--------------
 405  | Invalid input
-
-
