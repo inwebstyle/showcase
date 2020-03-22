@@ -61,22 +61,33 @@ Code |  Description
   
 
 ### PUT /{parameter}
+Using these API's you can:
+* Bring the decanter contents to a desired temperature level.
+* Shake the decanter to saturate the wine with oxygen or stop the shaking process.
 
 #### Parameters:
 
-Label     | Type   | Value Range                      | Example       | Description
-----------|--------|----------------------------------|---------------|-------------
-temp      | number | 0-100                            | `45`          | **Temperature**. Target temperature of the liquid in degrees Celsius.
-vibr      | string | array {on, off}                  | `on`          | **Vibration**: `on` - start shaking, `off` - stop shaking. on/off. 
+Label     | Type   | Value Range     | Example | Description
+----------|--------|-----------------|---------|-------------
+temp      | number | 0-100           | `45`    | **Target temperature** of the liquid in degrees Celsius.
+vibr      | string | array {on, off  | `on`    | **Vibration**: `on` - start shaking, `off` - stop shaking. 
 
-#### Example
-PUT /temp/{value}
-**Heat or cool the wine**: bring the decanter contents to a certain temperature level.
+> Example 1: Cool the wine from the current temperature (45C) to 18C
+PUT /temp/{18}
 
-PUT /vibr/{value}
-**Start/stop vibration**: shake the decanter to saturate the wine with oxygen or stop the shaking process.
+> Example 2: Shake the decanter to saturate the wine with oxygen:
+PUT /vibr/{on}
 
-#### Error Codes
+
+#### Responses
+
+**Successful Response**
+
+    {
+      Request successfully processed.
+    }
+    
+**Error Codes**
 
 Code | Description
 -----|--------------
