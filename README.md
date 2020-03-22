@@ -61,7 +61,7 @@ Code |  Description
            
   
 
-### POST /{parameter}
+### POST /{parameter}/{value}
 Using these API's you can:
 * Bring the decanter contents to a desired temperature level.
 * Shake the decanter to saturate the wine with oxygen or stop the shaking process.
@@ -93,5 +93,6 @@ vibr      | string | array {on, off  | `on`    | **Vibration**: `on` - start sha
 **Error Codes**
 
 Code | Description
------|--------------
+-----|-----------------
+404  | Device not found
 405  | Invalid input
