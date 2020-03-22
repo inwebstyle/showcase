@@ -60,7 +60,7 @@ Code |  Description
            
   
 
-### PUT /{parameter}
+### POST /{parameter}
 Using these API's you can:
 * Bring the decanter contents to a desired temperature level.
 * Shake the decanter to saturate the wine with oxygen or stop the shaking process.
@@ -74,11 +74,11 @@ vibr      | string | array {on, off  | `on`    | **Vibration**: `on` - start sha
 
 > Example 1: Cool the wine from the current temperature (45C) to 18C
 
-```PUT /temp/{18}```
+```POST /temp/{18}```
 
 > Example 2: Shake the decanter to saturate the wine with oxygen:
 
-```PUT /vibr/{on}```
+```POST /vibr/{on}```
 
 
 #### Responses
