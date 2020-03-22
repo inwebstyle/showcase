@@ -1,7 +1,7 @@
 # iWine API 
 
-* Version: "1.0"
-* openapi: '3.0.3'
+* Version: 1.0
+* openapi: 3.0.3
 * Terms of service: https://iwine.iot/terms
 * License: https://iwine.iot/license
 * Production Server: https://api.iwine.iot/data/1.0/
