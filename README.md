@@ -57,8 +57,7 @@ vibr      | string | array {on, off}                  | `on`          | **Vibrat
 Code |  Description
 -----|------------------
 404  | Device not found
-       
-         
+           
   
 
 ### PUT /{parameter}
