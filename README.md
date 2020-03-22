@@ -73,10 +73,10 @@ temp      | number | 0-100           | `45`    | **Target temperature** of the l
 vibr      | string | array {on, off  | `on`    | **Vibration**: `on` - start shaking, `off` - stop shaking. 
 
 > Example 1: Cool the wine from the current temperature (45C) to 18C
-PUT /temp/{18}
+```PUT /temp/{18}
 
 > Example 2: Shake the decanter to saturate the wine with oxygen:
-PUT /vibr/{on}
+```PUT /vibr/{on}
 
 
 #### Responses
